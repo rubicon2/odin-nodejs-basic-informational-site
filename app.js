@@ -1,9 +1,24 @@
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<h1>Initial Commit</h1>');
-  res.end();
+// Setup
+const app = new express();
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.listen(8080, () => console.log('Listening for requests on port 8080'));
+
+// Routes
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Welcome' });
 });
 
-server.listen(8080);
+app.get('/about', (req, res) => {
+  res.render('about', { title: 'About' });
+});
+
+app.get('/contact-me', (req, res) => {
+  res.render('contact-me', { title: 'Contact Me' });
+});
+
+app.use((req, res) => {
+  res.render('404', { title: '404' });
+});

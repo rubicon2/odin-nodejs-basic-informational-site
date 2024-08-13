@@ -1,0 +1,17 @@
+{
+  "name": "odin-nodejs-basic-informational-site",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon ./app.js localhost 8080"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
+  }
+}

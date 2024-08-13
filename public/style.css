@@ -46,7 +46,10 @@ h6 {
 /* Styling */
 :root {
   --banner-color: #0071d4;
+  --text-color: #292929;
+  --std-padding: 1rem;
   font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
 }
 
 h1,
@@ -58,11 +61,32 @@ h6 {
   font-family: 'Oswald', sans-serif;
 }
 
+p {
+  padding-bottom: 1em;
+}
+p:last-of-type {
+  padding-bottom: 0;
+}
+
+.std-bottom-padding {
+  padding-bottom: var(--std-padding);
+}
+
+/* Reusable util classes */
 .container {
   max-width: 1000px;
   margin: 0 auto;
 }
+.container--main {
+  padding: var(--std-padding) 0;
+}
 
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Specific styling */
 .banner {
   background-color: var(--banner-color);
   color: white;
@@ -89,6 +113,12 @@ h6 {
 .banner a:hover {
   filter: brightness(0.7);
 }
-body {
-  background-color: pink;
+
+.index__hero {
+  font-size: 4rem;
+  font-weight: 400;
+}
+.index__main-img {
+  height: 100%;
+  object-fit: cover;
 }

@@ -3,5 +3,27 @@
   <%- include('./partials/header') %>
   <main class="container container--main">
     <h1>Contact Me</h1>
+    <form action="contact-me" method="post" class="contact__form">
+      <div class="contact__form__item">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div class="contact__form__item">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="contact__form__item">
+        <label for="message">Message:</label>
+        <textarea
+          name="message"
+          id="message"
+          class="resize-y"
+          required
+        ></textarea>
+      </div>
+      <div class="contact__form__item">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   </main>
 </body>

@@ -47,7 +47,7 @@ h6 {
 :root {
   --banner-color: #0071d4;
   --text-color: #292929;
-  --std-padding: 1rem;
+  --std-padding: 1.5rem;
   font-family: 'Open Sans', sans-serif;
   color: var(--text-color);
 }
